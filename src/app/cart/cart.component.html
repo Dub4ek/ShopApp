@@ -1,1 +1,10 @@
-<p>cart works!</p>
+<section>
+  <h3>Cart</h3>
+  <ul *ngIf="isProductsExist; else elseBlock">
+    <li *ngFor="let product of cartCollection">
+      <span>{{product.name}}</span>
+      <span>{{product.price}}</span>
+    </li>
+  </ul>
+  <ng-template #elseBlock>Your cart is empty</ng-template>
+</section>
