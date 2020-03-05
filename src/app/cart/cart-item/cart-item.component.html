@@ -1,0 +1,6 @@
+<div class="cart-item">
+  <span class="cart-item__name">{{product?.name}}</span>
+  <span class="cart-item__price">{{product?.price}} $</span>
+  <input #count class="cart-item__count" [value]="countItem" type="number" max="100" min="0" (change)="countItemsChangeHandler(count.value)">
+  <button class="cart-item__delete" (click)="deleteButtonClickHandler()">Delete</button>
+</div>

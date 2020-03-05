@@ -1,0 +1,10 @@
+<div class="product">
+  <h4>{{product?.name}}</h4>
+  <span>Category: {{product?.category}}</span>
+  <p> Description: {{product?.description}}</p>
+  <div class="product__buy-container">
+    <span>Price: {{product?.price}}</span>
+    <button [disabled]="!product?.available" (click)="this.buyButtonClickHandler()">Buy</button>
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+.cart-item {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0.5em;
+
+  font-size: 1.3em;
+
+  &__name {
+    font-weight: 700;
+    color: #414141;
+
+    margin-right: 1em;
+  }
+
+  &__price {
+    color: #f04736;
+
+    margin-right: 1em;
+  }
+
+  &__count {
+    width: 50px;
+    margin-right: auto;
+  }
+}

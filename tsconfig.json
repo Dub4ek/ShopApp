@@ -18,7 +18,10 @@
       "es2018",
       "dom"
     ],
-    "strict": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "pretty": true,
+    "noImplicitAny": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

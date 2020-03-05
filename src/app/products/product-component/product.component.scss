@@ -1,0 +1,11 @@
+.product {
+  display: flex;
+  flex-direction: column;
+
+  &__buy-container {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+  }
+}

@@ -1,0 +1,8 @@
+<section>
+  <h3>Products list</h3>
+  <ul>
+    <li *ngFor="let product of products">
+      <app-product-component [product]="product" (buyProductEvent)="buyProductEventHandler($event)"></app-product-component>
+    </li>
+  </ul>
+</section>

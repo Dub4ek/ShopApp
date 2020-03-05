@@ -1,0 +1,18 @@
+<section class="cart" aria-labelledby="cart">
+  <h3 id="cart">Cart</h3>
+  <div class="cart__header">
+    <span>Count: {{productsCount}}</span>
+    <span>Cost: {{cartCost}} $</span>
+  </div>
+  <ul class="cart__list" *ngIf="isProductsExist; else elseBlock">
+    <li *ngFor="let product of cartCollection">
+      <app-cart-item
+        appHighlightBackground
+        [product]="product"
+        (deleteCartItemEvent)="deleteCartItemEventHandler($event)"
+        (changeCartItemCountEvent)="changeItemCountEvent($event)"
+      ></app-cart-item>
+    </li>
+  </ul>
+  <ng-template #elseBlock>Your cart is empty</ng-template>
+</section>
