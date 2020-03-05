@@ -13,6 +13,7 @@ export class CartService {
 
   setProduct(value: CartModel): void {
     if (!this.data.map(item => item.id).includes(value.id)) {
+      value.count = 1;
       this.data.push(value);
       this.cartCollectionSource.next(this.data);
     }
@@ -36,6 +37,7 @@ export class CartService {
   }
 
   getCartCost(): number {
+    console.log(this.data);
     return this.data
       .map(products => {
         if (products.price && products.count) {
