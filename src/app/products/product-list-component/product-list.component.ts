@@ -10,24 +10,25 @@ import { CartService } from '../../cart/cart.service';
   styleUrls: [ './product-list.component.scss' ]
 })
 export class ProductListComponent implements OnInit {
-  productService: ProductsService;
-  cartService: CartService;
+  // productService: ProductsService; // этого не нужно делать, надо добавить модификатор доступа для параметров
+  // конструктора и все произойдет
+  // cartService: CartService;
   products?: Array<ProductModel>;
 
-  constructor(productService: ProductsService, cartService: CartService) {
-    this.productService = productService;
-    this.cartService = cartService;
+  constructor(private productService: ProductsService, private cartService: CartService) {
+    // this.productService = productService;
+    // this.cartService = cartService;
   }
 
   ngOnInit(): void {
     this.products = this.getProducts();
   }
 
-  getProducts() {
+  private getProducts() {
     return this.productService.getProducts();
   }
 
-  buyProductEventHandler(value: ProductModel) {
+  onBuyProductEventHandler(value: ProductModel) {
     this.cartService.setProduct(value);
   }
 }

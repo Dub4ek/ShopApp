@@ -9,7 +9,7 @@ import { CartModel } from '../CartModel';
   styleUrls: ['./cart-list.component.scss']
 })
 export class CartListComponent implements OnDestroy {
-  cartService: CartService;
+  // cartService: CartService;
   cartCollection?: Array<CartModel>;
   isProductsExist = false;
   productsCount = 0;
@@ -18,8 +18,8 @@ export class CartListComponent implements OnDestroy {
   private subscription: Subscription;
 
 
-  constructor(cartService: CartService) {
-    this.cartService = cartService;
+  constructor(private cartService: CartService) {
+    // this.cartService = cartService;
     this.subscription = this.cartService.cartCollectionChanged$.subscribe(this.cardCollectionChanged.bind(this));
   }
 

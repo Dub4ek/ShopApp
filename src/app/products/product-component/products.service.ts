@@ -6,11 +6,11 @@ import { ProductsCollectionService } from '../../shared/products-collection.serv
   providedIn: 'root'
 })
 export class ProductsService {
-  productsCollectionService: ProductsCollectionService;
+  // productsCollectionService: ProductsCollectionService;
   data: Array<ProductModel> = [];
 
-  constructor(productsCollectionService: ProductsCollectionService) {
-    this.productsCollectionService = productsCollectionService;
+  constructor(private productsCollectionService: ProductsCollectionService) {
+    // this.productsCollectionService = productsCollectionService;
     this.data = this.productsCollectionService.getData();
   }
 
