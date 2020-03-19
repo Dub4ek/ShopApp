@@ -37,7 +37,6 @@ export class CartService {
   }
 
   getCartCost(): number {
-    console.log(this.data);
     return this.data
       .map(products => {
         if (products.price && products.count) {
