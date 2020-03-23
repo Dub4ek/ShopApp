@@ -15,7 +15,7 @@ export class ProductsCollectionService {
       `Name${index}`,
       `Product${index} description`,
       Math.pow(index, index),
-      Categories.FirstCategory,
+      Categories.SecondCategory,
       Boolean(Math.random() > 0.5),
     ));
   }
