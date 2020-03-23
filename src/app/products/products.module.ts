@@ -13,7 +13,8 @@ import { ProductsService } from './product-component/products.service';
   exports: [
     ProductListComponent
   ],
-  providers: [ ProductsService ]
+  // providers: [ ProductsService ] // сервис уже зарегистрирован через свой дкоратор.
+  // Расположение сервиса не очень понятное, почему он в папке с компонентом?
 })
 export class ProductsModule {
 }

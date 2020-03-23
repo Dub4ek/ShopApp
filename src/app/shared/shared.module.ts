@@ -6,7 +6,7 @@ import { HighlightBackgroundDirective } from './highlight-background.directive';
 
 @NgModule({
   declarations: [ HighlightBackgroundDirective ],
-  providers: [ ProductsCollectionService ],
+  // providers: [ ProductsCollectionService ], // сервис уже зарегистрирован через свой декоратор
   exports: [
     HighlightBackgroundDirective
   ],

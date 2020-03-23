@@ -16,7 +16,6 @@ export class CartListComponent implements OnDestroy {
 
   private subscription: Subscription;
 
-
   constructor(private cartService: CartService) {
     this.subscription = this.cartService.cartCollectionChanged$.subscribe(this.cardCollectionChanged.bind(this));
   }

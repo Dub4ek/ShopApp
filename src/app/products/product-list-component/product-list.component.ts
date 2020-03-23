@@ -9,9 +9,8 @@ import { CartService } from '../../cart/cart.service';
   templateUrl: './product-list.component.html',
   styleUrls: [ './product-list.component.scss' ]
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit {   
   products?: Array<ProductModel>;
-
   constructor(
     private productService: ProductsService,
     private cartService: CartService) {}
@@ -20,11 +19,11 @@ export class ProductListComponent implements OnInit {
     this.products = this.getProducts();
   }
 
-  getProducts() {
+  private getProducts() {
     return this.productService.getProducts();
   }
 
-  buyProductEventHandler(value: ProductModel) {
+  onBuyProductEventHandler(value: ProductModel) {
     this.cartService.setProduct(value);
   }
 }
