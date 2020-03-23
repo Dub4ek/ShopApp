@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../product-component/products.service';
-import { ProductModel } from '../product-component/ProductModel';
+import { ProductModel } from '../product-component/product.model';
 import { CartService } from '../../cart/cart.service';
 
 
@@ -9,7 +9,7 @@ import { CartService } from '../../cart/cart.service';
   templateUrl: './product-list.component.html',
   styleUrls: [ './product-list.component.scss' ]
 })
-export class ProductListComponent implements OnInit {   
+export class ProductListComponent implements OnInit {
   products?: Array<ProductModel>;
   constructor(
     private productService: ProductsService,

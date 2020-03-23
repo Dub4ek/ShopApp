@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Subscription } from 'rxjs';
-import { CartModel } from '../CartModel';
+import { CartModel } from '../cart.model';
 
 @Component({
   selector: 'app-cart-list',
