@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostListener, Input, Renderer2 } from '@angular/
   selector: '[appClick]'
 })
 export class ClickDirective {
-  @Input() text: string = '';
+  @Input() text = '';
   @HostListener('click', ['$event.target'])
   mouseClickEventHandler() {
     this.renderer.addClass(this.el.nativeElement, 'fancy-click');

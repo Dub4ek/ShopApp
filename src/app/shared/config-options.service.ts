@@ -9,7 +9,7 @@ export class ConfigOptionsService {
   constructor() {
   }
 
-  setConfig({ id, login, email } : { id: string, login: string, email: string }) {
+  setConfig({ id, login, email }: { id: string, login: string, email: string }) {
     if (id) {
       this.config.id = id;
     }

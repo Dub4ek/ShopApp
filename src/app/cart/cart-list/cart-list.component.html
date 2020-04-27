@@ -2,7 +2,7 @@
   <h3 id="cart">Cart</h3>
   <div class="cart__header">
     <span>Count: {{productsCount}}</span>
-    <span>Cost: {{cartCost}} $</span>
+    <span>Cost: {{cartCost | currency: 'USD'}}</span>
   </div>
   <ul class="cart__list" *ngIf="isProductsExist; else elseBlock">
     <li *ngFor="let product of cartCollection">

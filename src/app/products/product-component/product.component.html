@@ -3,7 +3,7 @@
   <span>Category: {{product?.category}}</span>
   <p> Description: {{product?.description}}</p>
   <div class="product__buy-container">
-    <span>Price: {{product?.price}}</span>
+    <span>Price: {{product?.price | currency: 'USD'}} </span>
     <button [disabled]="!product?.available" (click)="this.buyButtonClickHandler()">Buy</button>
   </div>
 </div>
