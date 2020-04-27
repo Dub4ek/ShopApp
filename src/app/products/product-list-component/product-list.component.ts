@@ -24,6 +24,6 @@ export class ProductListComponent implements OnInit {
   }
 
   onBuyProductEventHandler(value: ProductModel) {
-    this.cartService.setProduct(value);
+    this.cartService.addProduct(value);
   }
 }

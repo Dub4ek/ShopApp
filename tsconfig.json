@@ -21,7 +21,14 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "pretty": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "plugins": [
+      {
+        "name": "@angular/language-service"
+      }
+    ]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

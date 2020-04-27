@@ -11,7 +11,7 @@ export class CartService {
 
   cartCollectionChanged$ = this.cartCollectionSource.asObservable();
 
-  setProduct(value: CartModel): void {
+  addProduct(value: CartModel): void {
     if (!this.data.map(item => item.id).includes(value.id)) {
       value.count = 1;
       this.data.push(value);
